@@ -14,6 +14,20 @@ const solution = (x) => {
   return str;
 };
 
+
+//alternate solution with recursion
+solution2 = (x, string = "") => {
+  if (0 < x) {
+      x -= 1;
+      string += "hello";
+      return solution(x, string);
+  } else {
+      return console.log(string);
+  }
+  }
+
+  solution(5);
+
 module.exports = {
   solution,
 };
