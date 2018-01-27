@@ -16,7 +16,7 @@ const solution = (x, string = "") => {
     }
   }
 
-  solution(5);
+  solution(5, testword);
 
 module.exports = {
   solution,
