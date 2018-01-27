@@ -7,16 +7,16 @@
  */
 
 const solution = (x, string = "") => {
-    if (0 < x) {
-        x -= 1;
-        string += string;
-        return solution(x, string);
-    } else {
-        return console.log(string);
-    }
+  if (0 < x) {
+      x -= 1;
+      console.log(string);
+      return solution(x, string);
+  } else {
+      return console.log("done");
   }
+}
 
-  solution(5, testword);
+solution(5, "one");
 
 module.exports = {
   solution,
