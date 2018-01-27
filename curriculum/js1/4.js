@@ -6,9 +6,17 @@
  * @returns {string}
  */
 
-const solution = (a, b) => {
-  return 0;
-};
+const solution = (x, string = "") => {
+    if (0 < x) {
+        x -= 1;
+        string += string;
+        return solution(x, string);
+    } else {
+        return console.log(string);
+    }
+  }
+
+  solution(5);
 
 module.exports = {
   solution,
