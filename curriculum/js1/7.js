@@ -5,7 +5,7 @@
  * @returns {boolean}
  */
 
-const solution = (a) => {
+const solution = (num) => {
   return 0;
 };
 
