@@ -15,6 +15,8 @@ const solution = (x, funct) => {
     return solution (x, funct)
   } else if (x == 0) {
     return console.log("done running");
+  } else {
+    return console.log("x is not valid");
   }
 };
 
