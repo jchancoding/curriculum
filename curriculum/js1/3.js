@@ -5,28 +5,12 @@
  * @returns {string}
  */
 
-const solution = (x) => {
-  // return 0;
-  var str = "";
-  for (i = 0; i <= x; i++) {
-    str += "hello";
-  }
-  return str;
-};
-
-
-//alternate solution with recursion
-solution2 = (x, string = "") => {
+solution = (x, string = "") => {
+  if (x <= 0) return string;
   if (0 < x) {
-      x -= 1;
-      string += "hello";
-      return solution(x, string);
-  } else {
-      return console.log(string);
+      return solution(x-1, `${string}hello`);
   }
-  }
-
-  solution(5);
+}
 
 module.exports = {
   solution,
