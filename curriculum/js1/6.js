@@ -8,7 +8,7 @@
 const solution = (num, counter = 2, sum = 0) => {
   //if counter reaches half of the number, return sum (this eliminates duplicate divisors to the sum)
   if (counter > num/2) {
-    return console.log(sum);
+    return sum;
   }
 
   //if check to add to sum if counter number is a divisor
@@ -17,11 +17,8 @@ const solution = (num, counter = 2, sum = 0) => {
   } 
 
   //increment counter and run again
-  counter += 1;
-  return solution(num, counter, sum);
+  return solution(num, counter+1, sum);
 };
-
-solution(10);
 
 module.exports = {
   solution,
