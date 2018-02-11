@@ -7,9 +7,7 @@
 
 solution = (x, string = "") => {
   if (x <= 0) return string;
-  if (0 < x) {
-      return solution(x-1, `${string}hello`);
-  }
+  return solution(x-1, `${string}hello`);
 }
 
 module.exports = {
