@@ -6,17 +6,14 @@
  * @returns {string}
  */
 
-const solution = (x, string = "") => {
+const solution = (x, str, result="") => {
+  if (!x) {
+    return result;
+  }
   if (0 < x) {
-      x -= 1;
-      console.log(string);
-      return solution(x, string);
-  } else {
-      return console.log("done");
+    return solution(x-1 , str, result+str);
   }
 }
-
-solution(5, "one");
 
 module.exports = {
   solution,
