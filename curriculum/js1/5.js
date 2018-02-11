@@ -4,24 +4,13 @@
  * @param {number} a
  * @param {function} b
  */
-const samplefunct = () => {
-  console.log("running samplefunct");
-}
 
-const solution = (x, funct) => {
-  if (0 < x) {
-    x -= 1;
-    samplefunct();
-    return solution (x, funct)
-  } else if (x == 0) {
-    return console.log("done running");
-  } else {
-    return console.log("x is not valid");
+const solution = (a, b) => {
+  if (0 < a) {
+    b();
+    return solution (a-1, b);
   }
-};
-
-solution(7, samplefunct());
-
+}
 
 module.exports = {
   solution,
