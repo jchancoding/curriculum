@@ -7,10 +7,10 @@
 
 const solution = (a, b, counter = 1, GCD = 1) => {
   //stops once counter reaches the lesser of a and b
-  if (b > a && counter > a) {
-    return console.log("GCD is: "+GCD);
-  } else if (a > b && counter > b) {
-    return console.log("GCD is: "+GCD);
+  if (b >= a && counter > a) {
+    return GCD
+  } else if (a >= b && counter > b) {
+    return GCD
   }
 
   //if a & b share a divisor it is the new GCD
@@ -19,11 +19,8 @@ const solution = (a, b, counter = 1, GCD = 1) => {
   }
   
   //increment and run again
-  counter++;
-  return solution(a, b, counter, GCD);
+  return solution(a, b, counter+1, GCD);
 };
-
-solution(150, 50);
 
 module.exports = {
   solution,
