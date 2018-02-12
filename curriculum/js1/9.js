@@ -7,8 +7,7 @@
 const solution = (num, counter = num) => {
   //early elimination if num is a multiple of 7
   if (num % 7 === 0 && counter == num) {
-    num += 7;
-    return num
+    return num+7;
   }
 
   //incrementally checks if counter is divisible by 7
