@@ -10,9 +10,7 @@ const solution = (x, str, result="") => {
   if (!x) {
     return result;
   }
-  if (0 < x) {
     return solution(x-1 , str, result+str);
-  }
 }
 
 module.exports = {
