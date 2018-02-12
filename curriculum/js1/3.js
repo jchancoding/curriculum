@@ -5,7 +5,7 @@
  * @returns {string}
  */
 
-solution = (x, string = "") => {
+const solution = (x, string = "") => {
   if (x <= 0) return string;
   return solution(x-1, `${string}hello`);
 }
