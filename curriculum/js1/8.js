@@ -5,17 +5,17 @@
  * @returns {number}
  */
 
-const solution = (a, b, counter = 1, GCD = 1) => {
+const solution = (a, b, counter = 1, gcd = 1) => {
   //stops once counter reaches the lesser of a and b
   if (counter > a || counter > b) {
-    return GCD
+    return gcd
   } 
   //if a & b share a divisor it is the new GCD
   if (a % counter === 0 && b % counter === 0) {
-    GCD = counter;
+    gcd = counter;
   }
   //increment and run again
-  return solution(a, b, counter+1, GCD);
+  return solution(a, b, counter+1, gcd);
 };
 
 module.exports = {
