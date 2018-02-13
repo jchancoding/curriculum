@@ -4,8 +4,18 @@
  * @returns {number}
  */
 
-const solution = (a) => {
-  return 0;
+const solution = (num, counter = num) => {
+  //early elimination if num is a multiple of 7
+  if (num % 7 === 0 && counter == num) {
+    return num+7;
+  }
+
+  //incrementally checks if counter is divisible by 7
+  if (counter % 7 === 0) {
+    return counter;
+  }
+
+  return solution(num, counter+1);
 };
 
 module.exports = {
