@@ -4,8 +4,14 @@
  * @returns {array}
  */
 
-const solution = (a) => {
-  return [];
+const solution = (a, idx = 0, b = []) => {
+  if (idx == a.length) {
+    return b;
+  }
+  if (a[idx] > 5) {
+    b.push(a[idx]);
+  }
+  return solution(a, idx + 1, b);
 };
 
 module.exports = {
