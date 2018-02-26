@@ -26,11 +26,6 @@ const solution = () => {
   }     
 }
 
-solution();
-  
-var myarr = [1,2,3,4,5];
-console.log(myarr.gsReduce(function callback(element){return 2*element;}, 0, {}));
-
 module.exports = {
   solution,
 };
