@@ -13,11 +13,6 @@ const solution = () => {
   }     
 }
 
-solution();
-
-var myarr = [1,2,3,4,5];
-console.log(myarr.gsMap((element) => 2 * element));
-
 module.exports = {
   solution,
 };
