@@ -7,10 +7,16 @@
  */
 
 const solution = () => {
-  Array.prototype.gsForEach = function () {
-    // To get the actual array, use this
-  };
-};
+  Array.prototype.gsForEach = function (callback, idx = 0) {
+    if (!callback) {
+      return undefined;
+    }
+    if (idx == this.length) {
+      return;
+    }
+    return this.gsForEach(callback, idx + 1);
+  }     
+}
 
 module.exports = {
   solution,
