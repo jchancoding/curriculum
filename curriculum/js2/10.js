@@ -11,9 +11,11 @@ const solution = () => {
     if (!callback) {
       return undefined;
     }
-    if (idx == this.length) {
+    
+    if (idx === this.length) {
       return;
     }
+    callback(this[idx]);
     return this.gsForEach(callback, idx + 1);
   }     
 }
