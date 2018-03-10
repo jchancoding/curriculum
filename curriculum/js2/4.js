@@ -6,7 +6,7 @@
 
 const solution = (a, idx = 0, sum = 0) => {
   if (a.length == 0) {
-    return ('');
+    return (-1);
   }
   if (idx == a.length) {
     return sum;
