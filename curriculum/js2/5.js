@@ -4,7 +4,7 @@
  * @returns {number}
  */
 
-const solution = (a, idx = 0, max = '') => {
+const solution = (a, idx = 0, max = a[0]) => {
   if (idx == a.length) {
     return max;
   }
