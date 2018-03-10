@@ -5,7 +5,7 @@
  */
 
 const solution = (a, idx = 0, b = []) => {
-  if (idx == a.length) {
+  if (idx === a.length) {
     return b;
   }
   if (a[idx] > 5) {
